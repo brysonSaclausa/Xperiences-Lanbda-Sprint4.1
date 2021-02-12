@@ -107,14 +107,14 @@
                                     <action selector="savePostButtonTapped:" destination="SJs-F0-cAs" eventType="touchUpInside" id="2Wr-kf-FjB"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Dc-hE-nyQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Dc-hE-nyQ">
                                 <rect key="frame" x="20" y="159" width="374" height="196"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="196" id="RNU-4M-PPA"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLr-0k-tpR">
-                                <rect key="frame" x="20" y="363" width="374" height="38"/>
+                                <rect key="frame" x="20" y="372" width="374" height="38"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="AYX-LV-vwD"/>
@@ -130,7 +130,7 @@
                         <viewLayoutGuide key="safeArea" id="n6T-5G-R6D"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
-                            <constraint firstItem="CLr-0k-tpR" firstAttribute="top" secondItem="6Dc-hE-nyQ" secondAttribute="bottom" constant="8" id="1By-LW-BFW"/>
+                            <constraint firstItem="CLr-0k-tpR" firstAttribute="top" secondItem="6Dc-hE-nyQ" secondAttribute="bottom" constant="17" id="1By-LW-BFW"/>
                             <constraint firstItem="lke-HY-bno" firstAttribute="top" secondItem="n6T-5G-R6D" secondAttribute="top" constant="20" id="37J-gb-ErE"/>
                             <constraint firstItem="n6T-5G-R6D" firstAttribute="bottom" secondItem="19o-HE-gxH" secondAttribute="bottom" constant="90" id="HMH-Qp-UZc"/>
                             <constraint firstItem="n6T-5G-R6D" firstAttribute="trailing" secondItem="lke-HY-bno" secondAttribute="trailing" constant="20" id="Ksb-K9-FwZ"/>
