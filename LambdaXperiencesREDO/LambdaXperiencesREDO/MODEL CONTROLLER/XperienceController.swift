@@ -11,8 +11,8 @@ class XperiencePostController {
    
    var posts: [XperiencePost] = []
     
-    func createXperiencePost(with title: String) {
-        let xperiencePost = XperiencePost(title: title)
+    func createXperiencePost(with title: String, image: UIImage) {
+        let xperiencePost = XperiencePost(title: title, image: image)
         posts.append(xperiencePost)
     }
    
