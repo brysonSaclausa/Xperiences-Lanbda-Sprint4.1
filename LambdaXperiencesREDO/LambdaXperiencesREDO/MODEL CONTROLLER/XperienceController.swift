@@ -24,7 +24,7 @@ class XperiencePostController {
         }
     }
     
-    
+    //lat: 21.344843, lon: -157.910602
     
     
     

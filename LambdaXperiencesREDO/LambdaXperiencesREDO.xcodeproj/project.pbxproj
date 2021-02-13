@@ -11,6 +11,7 @@
 		7C34CB4F25D77677002FA2E5 /* XperienceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34CB4E25D77677002FA2E5 /* XperienceDetailViewController.swift */; };
 		7C7A725625D4F9DC00B9D6E9 /* XperiencePostsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A725525D4F9DC00B9D6E9 /* XperiencePostsCollectionViewController.swift */; };
 		7C7A725A25D63A7300B9D6E9 /* XperiencePostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A725925D63A7300B9D6E9 /* XperiencePostTableViewCell.swift */; };
+		7C9CF7E725D888EE00E831FD /* XperienceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CF7E625D888EE00E831FD /* XperienceMapViewController.swift */; };
 		7CE53C3225D22A390066C4AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE53C3125D22A390066C4AA /* AppDelegate.swift */; };
 		7CE53C3425D22A390066C4AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE53C3325D22A390066C4AA /* SceneDelegate.swift */; };
 		7CE53C3925D22A390066C4AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE53C3725D22A390066C4AA /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		7C34CB4E25D77677002FA2E5 /* XperienceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperienceDetailViewController.swift; sourceTree = "<group>"; };
 		7C7A725525D4F9DC00B9D6E9 /* XperiencePostsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperiencePostsCollectionViewController.swift; sourceTree = "<group>"; };
 		7C7A725925D63A7300B9D6E9 /* XperiencePostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperiencePostTableViewCell.swift; sourceTree = "<group>"; };
+		7C9CF7E625D888EE00E831FD /* XperienceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperienceMapViewController.swift; sourceTree = "<group>"; };
 		7CE53C2E25D22A390066C4AA /* LambdaXperiencesREDO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LambdaXperiencesREDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE53C3125D22A390066C4AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CE53C3325D22A390066C4AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				7CE53C5425D2394A0066C4AA /* AddXperienceViewController.swift */,
 				7C7A725525D4F9DC00B9D6E9 /* XperiencePostsCollectionViewController.swift */,
 				7C34CB4E25D77677002FA2E5 /* XperienceDetailViewController.swift */,
+				7C9CF7E625D888EE00E831FD /* XperienceMapViewController.swift */,
 			);
 			path = "VIEW CONTROLLERS";
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C9CF7E725D888EE00E831FD /* XperienceMapViewController.swift in Sources */,
 				7CE53C5225D239140066C4AA /* XperienceTableViewController.swift in Sources */,
 				7CE53C5525D2394A0066C4AA /* AddXperienceViewController.swift in Sources */,
 				7C34CB4F25D77677002FA2E5 /* XperienceDetailViewController.swift in Sources */,
