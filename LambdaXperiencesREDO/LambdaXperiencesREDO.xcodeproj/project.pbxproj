@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7C1E572425D4F6CE00026305 /* XperiencePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1E572325D4F6CE00026305 /* XperiencePost.swift */; };
+		7C34CB4F25D77677002FA2E5 /* XperienceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34CB4E25D77677002FA2E5 /* XperienceDetailViewController.swift */; };
 		7C7A725625D4F9DC00B9D6E9 /* XperiencePostsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A725525D4F9DC00B9D6E9 /* XperiencePostsCollectionViewController.swift */; };
+		7C7A725A25D63A7300B9D6E9 /* XperiencePostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A725925D63A7300B9D6E9 /* XperiencePostTableViewCell.swift */; };
 		7CE53C3225D22A390066C4AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE53C3125D22A390066C4AA /* AppDelegate.swift */; };
 		7CE53C3425D22A390066C4AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE53C3325D22A390066C4AA /* SceneDelegate.swift */; };
 		7CE53C3925D22A390066C4AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE53C3725D22A390066C4AA /* Main.storyboard */; };
@@ -21,7 +23,9 @@
 
 /* Begin PBXFileReference section */
 		7C1E572325D4F6CE00026305 /* XperiencePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperiencePost.swift; sourceTree = "<group>"; };
+		7C34CB4E25D77677002FA2E5 /* XperienceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperienceDetailViewController.swift; sourceTree = "<group>"; };
 		7C7A725525D4F9DC00B9D6E9 /* XperiencePostsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperiencePostsCollectionViewController.swift; sourceTree = "<group>"; };
+		7C7A725925D63A7300B9D6E9 /* XperiencePostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperiencePostTableViewCell.swift; sourceTree = "<group>"; };
 		7CE53C2E25D22A390066C4AA /* LambdaXperiencesREDO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LambdaXperiencesREDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE53C3125D22A390066C4AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CE53C3325D22A390066C4AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		7C7A725C25D63A7F00B9D6E9 /* VIEWS */ = {
+			isa = PBXGroup;
+			children = (
+				7C7A725925D63A7300B9D6E9 /* XperiencePostTableViewCell.swift */,
+			);
+			path = VIEWS;
+			sourceTree = "<group>";
+		};
 		7CE53C2525D22A390066C4AA = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +98,9 @@
 				7CE53C5025D238D80066C4AA /* VIEW CONTROLLERS */,
 				7CE53C4825D230040066C4AA /* MODEL */,
 				7CE53C4F25D236AE0066C4AA /* MODEL CONTROLLER */,
-				7C7A725325D4F90100B9D6E9 /* Resources */,
+				7C7A725C25D63A7F00B9D6E9 /* VIEWS */,
 				7C7A725425D4F91300B9D6E9 /* Storyboards */,
+				7C7A725325D4F90100B9D6E9 /* Resources */,
 				7CE53C3F25D22A3A0066C4AA /* Info.plist */,
 			);
 			path = LambdaXperiencesREDO;
@@ -115,6 +128,7 @@
 				7CE53C5125D239140066C4AA /* XperienceTableViewController.swift */,
 				7CE53C5425D2394A0066C4AA /* AddXperienceViewController.swift */,
 				7C7A725525D4F9DC00B9D6E9 /* XperiencePostsCollectionViewController.swift */,
+				7C34CB4E25D77677002FA2E5 /* XperienceDetailViewController.swift */,
 			);
 			path = "VIEW CONTROLLERS";
 			sourceTree = "<group>";
@@ -191,10 +205,12 @@
 			files = (
 				7CE53C5225D239140066C4AA /* XperienceTableViewController.swift in Sources */,
 				7CE53C5525D2394A0066C4AA /* AddXperienceViewController.swift in Sources */,
+				7C34CB4F25D77677002FA2E5 /* XperienceDetailViewController.swift in Sources */,
 				7CE53C3225D22A390066C4AA /* AppDelegate.swift in Sources */,
 				7C1E572425D4F6CE00026305 /* XperiencePost.swift in Sources */,
 				7CE53C3425D22A390066C4AA /* SceneDelegate.swift in Sources */,
 				7CE53C4D25D236A50066C4AA /* XperienceController.swift in Sources */,
+				7C7A725A25D63A7300B9D6E9 /* XperiencePostTableViewCell.swift in Sources */,
 				7C7A725625D4F9DC00B9D6E9 /* XperiencePostsCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

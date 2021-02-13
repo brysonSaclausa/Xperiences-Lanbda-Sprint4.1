@@ -8,14 +8,22 @@
 import UIKit
 
 class XperiencePostController {
-   
-   var posts: [XperiencePost] = []
+    
+    var postsArray = [XperiencePost]()
     
     func createXperiencePost(with title: String, image: UIImage) {
-        let xperiencePost = XperiencePost(title: title, image: image)
-        posts.append(xperiencePost)
+            
+        }
+    
+    //MARK: - Mock Posts
+    
+    init() {
+        let post1 = XperiencePost(title: "Hello World, Goodbye World", image: UIImage(named: "SLB")!)
+        [post1].forEach {
+            postsArray.append($0)
+        }
     }
-   
+    
     
     
     

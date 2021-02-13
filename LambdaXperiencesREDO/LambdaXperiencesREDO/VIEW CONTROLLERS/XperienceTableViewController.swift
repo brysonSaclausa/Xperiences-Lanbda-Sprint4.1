@@ -9,13 +9,15 @@ import UIKit
 
 class XperienceTableViewController: UITableViewController {
     
+    var xperiencePostController: XperiencePostController! = nil
+    
     
     //MARK: - IBOUTLETS
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       xperiencePostController = XperiencePostController()
         
     }
 
@@ -23,12 +25,16 @@ class XperienceTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return xperiencePostController.postsArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "xperienceCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "xperienceCell", for: indexPath) as! XperiencePostTableViewCell
+        
+        let post = xperiencePostController.postsArray[indexPath.row]
+        cell.post = post
+        
         
         return cell
     }
