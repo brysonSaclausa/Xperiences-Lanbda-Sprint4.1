@@ -168,20 +168,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19o-HE-gxH">
-                                <rect key="frame" x="107" y="688" width="200" height="30"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="lTc-N9-obO"/>
-                                    <constraint firstAttribute="height" constant="30" id="lh5-Zl-CS2"/>
-                                </constraints>
-                                <state key="normal" title="Create Xperience">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="savePostButtonTapped:" destination="SJs-F0-cAs" eventType="touchUpInside" id="2Wr-kf-FjB"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Dc-hE-nyQ">
                                 <rect key="frame" x="20" y="159" width="374" height="196"/>
                                 <constraints>
@@ -201,9 +187,38 @@
                                     <action selector="choosePhotoButtonTapped:" destination="SJs-F0-cAs" eventType="touchUpInside" id="tc3-6x-1SK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHO-jL-brt">
-                                <rect key="frame" x="199" y="427" width="16" height="22"/>
-                                <state key="normal" image="mic" catalog="system"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kUo-Oc-ayf">
+                                <rect key="frame" x="134" y="427" width="146" height="63"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHO-jL-brt">
+                                        <rect key="frame" x="64.5" y="0.0" width="17" height="22"/>
+                                        <state key="normal" image="mic" catalog="system"/>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1qz-xM-j8P">
+                                        <rect key="frame" x="0.0" y="32" width="146" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Geotag?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwx-BH-OLy">
+                                                <rect key="frame" x="0.0" y="0.0" width="89" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tsp-BC-QqH">
+                                                <rect key="frame" x="97" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19o-HE-gxH">
+                                <rect key="frame" x="105" y="715" width="204" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Create Xperience">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePostButtonTapped:" destination="SJs-F0-cAs" eventType="touchUpInside" id="2Wr-kf-FjB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n6T-5G-R6D"/>
@@ -211,19 +226,19 @@
                         <constraints>
                             <constraint firstItem="CLr-0k-tpR" firstAttribute="top" secondItem="6Dc-hE-nyQ" secondAttribute="bottom" constant="17" id="1By-LW-BFW"/>
                             <constraint firstItem="lke-HY-bno" firstAttribute="top" secondItem="n6T-5G-R6D" secondAttribute="top" constant="20" id="37J-gb-ErE"/>
-                            <constraint firstItem="n6T-5G-R6D" firstAttribute="bottom" secondItem="19o-HE-gxH" secondAttribute="bottom" constant="90" id="HMH-Qp-UZc"/>
-                            <constraint firstItem="RHO-jL-brt" firstAttribute="top" secondItem="CLr-0k-tpR" secondAttribute="bottom" constant="17" id="KWg-Sa-xhA"/>
+                            <constraint firstItem="n6T-5G-R6D" firstAttribute="trailing" secondItem="19o-HE-gxH" secondAttribute="trailing" constant="105" id="KbA-rE-WKS"/>
                             <constraint firstItem="n6T-5G-R6D" firstAttribute="trailing" secondItem="lke-HY-bno" secondAttribute="trailing" constant="20" id="Ksb-K9-FwZ"/>
                             <constraint firstItem="6Dc-hE-nyQ" firstAttribute="trailing" secondItem="psV-mw-QJX" secondAttribute="trailing" id="QQM-PP-TaS"/>
                             <constraint firstItem="psV-mw-QJX" firstAttribute="top" secondItem="lke-HY-bno" secondAttribute="bottom" constant="48" id="RZ5-M4-qgn"/>
-                            <constraint firstItem="19o-HE-gxH" firstAttribute="centerX" secondItem="aBm-Hy-cSl" secondAttribute="centerX" id="UZ9-YQ-wnS"/>
-                            <constraint firstItem="RHO-jL-brt" firstAttribute="leading" secondItem="n6T-5G-R6D" secondAttribute="leading" constant="199" id="ciu-Dy-q7q"/>
+                            <constraint firstItem="kUo-Oc-ayf" firstAttribute="centerX" secondItem="aBm-Hy-cSl" secondAttribute="centerX" id="dRt-Uh-0mf"/>
+                            <constraint firstItem="19o-HE-gxH" firstAttribute="leading" secondItem="n6T-5G-R6D" secondAttribute="leading" constant="105" id="eE5-Ck-mN4"/>
+                            <constraint firstItem="n6T-5G-R6D" firstAttribute="bottom" secondItem="19o-HE-gxH" secondAttribute="bottom" constant="63" id="fK2-fs-vBG"/>
                             <constraint firstItem="n6T-5G-R6D" firstAttribute="trailing" secondItem="psV-mw-QJX" secondAttribute="trailing" constant="20" id="fdc-uo-SJA"/>
                             <constraint firstItem="6Dc-hE-nyQ" firstAttribute="leading" secondItem="psV-mw-QJX" secondAttribute="leading" id="goh-sP-0tR"/>
                             <constraint firstItem="psV-mw-QJX" firstAttribute="leading" secondItem="n6T-5G-R6D" secondAttribute="leading" constant="20" id="hsl-xx-6pz"/>
                             <constraint firstItem="lke-HY-bno" firstAttribute="leading" secondItem="n6T-5G-R6D" secondAttribute="leading" constant="20" id="iDf-Dq-Vya"/>
                             <constraint firstItem="6Dc-hE-nyQ" firstAttribute="leading" secondItem="CLr-0k-tpR" secondAttribute="leading" id="jM8-Ms-ksk"/>
-                            <constraint firstItem="n6T-5G-R6D" firstAttribute="trailing" secondItem="RHO-jL-brt" secondAttribute="trailing" constant="199" id="qdm-JP-v14"/>
+                            <constraint firstItem="kUo-Oc-ayf" firstAttribute="top" secondItem="CLr-0k-tpR" secondAttribute="bottom" constant="17" id="sR1-c1-MNT"/>
                             <constraint firstItem="6Dc-hE-nyQ" firstAttribute="top" secondItem="psV-mw-QJX" secondAttribute="bottom" constant="17" id="uTu-jp-O71"/>
                             <constraint firstItem="6Dc-hE-nyQ" firstAttribute="trailing" secondItem="CLr-0k-tpR" secondAttribute="trailing" id="wZk-li-9cV"/>
                         </constraints>
@@ -236,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYb-tf-7Vv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="690" y="465"/>
+            <point key="canvasLocation" x="689.85507246376812" y="464.73214285714283"/>
         </scene>
         <!--Xperience Map-->
         <scene sceneID="dDQ-k9-XP4">
@@ -260,6 +275,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Xperience Map" id="R6r-s1-umF"/>
+                    <connections>
+                        <outlet property="mapView" destination="yTn-Sb-UDn" id="nJt-yL-D9c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIB-PA-ahi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
