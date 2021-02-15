@@ -11,11 +11,12 @@ import MapKit
 class XperiencePost {
     let title: String
     let image: UIImage
+    let location: CLLocationCoordinate2D
 
-    init(title: String, image: UIImage) {
+    init(title: String, image: UIImage, location: CLLocationCoordinate2D) {
         self.title = title
         self.image = image
-        
+        self.location = location
     }
     
     

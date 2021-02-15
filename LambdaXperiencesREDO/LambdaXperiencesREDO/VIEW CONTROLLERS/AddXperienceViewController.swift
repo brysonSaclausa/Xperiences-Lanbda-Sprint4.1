@@ -9,7 +9,11 @@ import UIKit
 import CoreImage
 import Photos
 
+
 class AddXperienceViewController: UIViewController {
+    let xperiencePostController = XperiencePostController()
+    let locationManager = CLLocationManager()
+    
     
     
     //MARK: - IBOUTLETS
@@ -26,8 +30,8 @@ class AddXperienceViewController: UIViewController {
     //MARK: - LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        getCurrentLocation()
     }
     
     //MARK: - METHODS
@@ -50,10 +54,22 @@ class AddXperienceViewController: UIViewController {
             present(imagePicker, animated: true)
         }
     
+    private func getCurrentLocation(){
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
     
     //MARK: - IBACTIONS
     @IBAction func savePostButtonTapped(_ sender: Any) {
-        
+        guard let title = titleTextField.text, !title.isEmpty,
+            let image = imageView.image else { return }
+        getCurrentLocation()
+        guard let location = locationManager.location?.coordinate else { return }
+        xperiencePostController.createXperiencePost(with: title, image: image, location: location)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func choosePhotoButtonTapped(_ sender: Any) {

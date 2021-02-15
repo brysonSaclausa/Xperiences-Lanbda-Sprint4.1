@@ -24,6 +24,8 @@ class XperiencePostTableViewCell: UITableViewCell {
         cellimageView.image = post.image
         cellTitle.text = post.title
     }
+    
+    
 
 
 

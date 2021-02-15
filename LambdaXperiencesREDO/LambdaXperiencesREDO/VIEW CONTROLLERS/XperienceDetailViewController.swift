@@ -8,11 +8,31 @@
 import UIKit
 
 class XperienceDetailViewController: UIViewController {
+    
+    var post: XperiencePost?
+    var postIndex: Int?
+    var postController: XperiencePostController?
+    
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setUpViews()
+    }
+    
+    func setUpViews() {
+        guard let post = post else { return }
+        titleLabel?.text = post.title
+        imageView?.image = post.image
+        latitudeLabel?.text = "Latitude \(String(post.location.latitude))"
+        longitudeLabel?.text = "Longitude \(String(post.location.longitude))"
+        
     }
     
 

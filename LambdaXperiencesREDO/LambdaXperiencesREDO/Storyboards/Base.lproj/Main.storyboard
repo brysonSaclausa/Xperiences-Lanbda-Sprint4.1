@@ -56,7 +56,7 @@
                                 <connections>
                                     <outlet property="cellTitle" destination="btj-JX-lgu" id="5Xl-Ma-DVg"/>
                                     <outlet property="cellimageView" destination="biJ-nw-R4J" id="bEx-PH-Mzd"/>
-                                    <segue destination="QSn-an-2Db" kind="show" id="ZiM-IH-1mA"/>
+                                    <segue destination="QSn-an-2Db" kind="show" identifier="showPostDetailSegue" id="ZiM-IH-1mA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -115,13 +115,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="alK-5Z-47z">
                                         <rect key="frame" x="0.0" y="282" width="354" height="43"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuv-KM-N3V">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuv-KM-N3V">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0u-5e-RxU">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0u-5e-RxU">
                                                 <rect key="frame" x="0.0" y="28.5" width="354" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -141,6 +141,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VjZ-HU-Tp3"/>
+                    <connections>
+                        <outlet property="imageView" destination="8DQ-J5-lH8" id="AXo-e4-Bb4"/>
+                        <outlet property="latitudeLabel" destination="tuv-KM-N3V" id="xS3-pw-vod"/>
+                        <outlet property="longitudeLabel" destination="C0u-5e-RxU" id="UsB-LB-HMQ"/>
+                        <outlet property="titleLabel" destination="7Hf-MG-Ebc" id="bGq-ut-3OP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5t9-Qz-AIu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,6 +249,7 @@
                             <constraint firstItem="6Dc-hE-nyQ" firstAttribute="trailing" secondItem="CLr-0k-tpR" secondAttribute="trailing" id="wZk-li-9cV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="a3S-Jr-LCb"/>
                     <connections>
                         <outlet property="createButton" destination="19o-HE-gxH" id="ogv-6I-0Io"/>
                         <outlet property="imageView" destination="6Dc-hE-nyQ" id="q0g-A8-zjY"/>
