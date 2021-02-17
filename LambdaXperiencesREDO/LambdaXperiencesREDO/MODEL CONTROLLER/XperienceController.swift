@@ -10,23 +10,27 @@ import MapKit
 
 class XperiencePostController {
     
-    var postsArray = [XperiencePost]()
+    var postsArray: [XperiencePost] = []
     
-    
-    func createXperiencePost(with title: String, image: UIImage, location: CLLocationCoordinate2D) {
-            let post = XperiencePost(title: title, image: image, location: location)
-        postsArray.append(post)
-        }
-    
-    //MARK: - Mock Posts
-    let slbLocation = CLLocationCoordinate2D(latitude: 21.344843, longitude: -157.910602)
-    init() {
-        let post1 = XperiencePost(title: "Hello World", image: UIImage(named: "SLB")!, location: slbLocation)
-        [post1].forEach {
-            postsArray.append($0)
-        }
+    func createXperiencePost(with title: String, image: UIImage, latitude: Double, longitude: Double) {
+        let newPost = XperiencePost(title: title, image: image, latitude: latitude, longitude: longitude)
+
+        postsArray.append(newPost)
     }
     
     
     
+    
+    //MARK: - Mock Posts
+    let slbLocation = CLLocationCoordinate2D(latitude: 21.344843, longitude: -157.910602)
+    let ahLocation = CLLocationCoordinate2D(latitude: 21.299927, longitude: -157.755751)
+    
+    init() {
+        let post1 = XperiencePost(title: "This is a mock post!", image: UIImage(named: "SLB")!, latitude: slbLocation.latitude, longitude: slbLocation.longitude)
+        
+        [post1].forEach {
+            postsArray.append($0)
+        }
+    }
+
 }

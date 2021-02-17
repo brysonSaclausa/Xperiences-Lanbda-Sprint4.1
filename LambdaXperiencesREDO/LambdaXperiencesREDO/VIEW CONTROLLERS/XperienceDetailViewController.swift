@@ -30,8 +30,8 @@ class XperienceDetailViewController: UIViewController {
         guard let post = post else { return }
         titleLabel?.text = post.title
         imageView?.image = post.image
-        latitudeLabel?.text = "Latitude \(String(post.location.latitude))"
-        longitudeLabel?.text = "Longitude \(String(post.location.longitude))"
+        latitudeLabel?.text = "Latitude \(String(post.latitude))"
+        longitudeLabel?.text = "Longitude \(String(post.longitude))"
         
     }
     

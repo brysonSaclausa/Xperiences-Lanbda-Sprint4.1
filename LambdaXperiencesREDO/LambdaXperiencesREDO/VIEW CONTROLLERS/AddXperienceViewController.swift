@@ -9,10 +9,16 @@ import UIKit
 import CoreImage
 import Photos
 
+protocol PostSaverDelegate {
+    func reloadData()
+}
 
 class AddXperienceViewController: UIViewController {
-    let xperiencePostController = XperiencePostController()
+    var xperiencePostController: XperiencePostController?
+    
     let locationManager = CLLocationManager()
+    var savePostDelegate: PostSaverDelegate?
+    var xperiencePost: XperiencePost?
     
     
     
@@ -68,8 +74,18 @@ class AddXperienceViewController: UIViewController {
             let image = imageView.image else { return }
         getCurrentLocation()
         guard let location = locationManager.location?.coordinate else { return }
-        xperiencePostController.createXperiencePost(with: title, image: image, location: location)
-        dismiss(animated: true, completion: nil)
+        xperiencePostController?.createXperiencePost(with: title, image: image, latitude: location.latitude, longitude: location.longitude)
+            print("Xperience Created")
+        
+            DispatchQueue.main.async {
+                self.savePostDelegate?.reloadData()
+                self.dismiss(animated: true, completion: nil)
+                
+            
+        }
+                
+            
+        
     }
     
     @IBAction func choosePhotoButtonTapped(_ sender: Any) {

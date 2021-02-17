@@ -10,16 +10,15 @@ import UIKit
 class XperienceTableViewController: UITableViewController {
     
     var xperiencePostController: XperiencePostController! = nil
-    
+    var xperiencePost: XperiencePost? 
     
     //MARK: - IBOUTLETS
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       xperiencePostController = XperiencePostController()
-        tableView.delegate = self
-        tableView.dataSource = self
+        xperiencePostController = XperiencePostController()
+
     }
 
     // MARK: - Table view data source
@@ -53,10 +52,28 @@ class XperienceTableViewController: UITableViewController {
             vc.post = post
             vc.postIndex = postIndex
             vc.postController = xperiencePostController
-            
+
+
+        } else
+        if segue.identifier == "addXperiencePost" {
+            guard let createVC = segue.destination as? AddXperienceViewController else { return }
+           
+            createVC.xperiencePost = xperiencePost
+            createVC.savePostDelegate = self
+            createVC.xperiencePostController = xperiencePostController
         }
     }
     
 
+}
+
+extension XperienceTableViewController: PostSaverDelegate {
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    
 }
 

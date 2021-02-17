@@ -37,20 +37,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6JV-1P-vfQ">
-                                            <rect key="frame" x="380.5" y="32" width="15.5" height="16.5"/>
-                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="6JV-1P-vfQ" firstAttribute="centerY" secondItem="bDK-es-TUY" secondAttribute="centerY" id="30j-zA-tKV"/>
-                                        <constraint firstItem="6JV-1P-vfQ" firstAttribute="trailing" secondItem="bDK-es-TUY" secondAttribute="trailingMargin" constant="2" id="DDG-RB-mlf"/>
                                         <constraint firstItem="biJ-nw-R4J" firstAttribute="centerY" secondItem="bDK-es-TUY" secondAttribute="centerY" id="SY5-3h-sSE"/>
                                         <constraint firstItem="biJ-nw-R4J" firstAttribute="leading" secondItem="bDK-es-TUY" secondAttribute="leading" constant="2" id="b8P-BT-DjO"/>
                                         <constraint firstItem="btj-JX-lgu" firstAttribute="centerY" secondItem="bDK-es-TUY" secondAttribute="centerY" id="dEB-0g-Obb"/>
-                                        <constraint firstItem="6JV-1P-vfQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="btj-JX-lgu" secondAttribute="trailing" constant="8" symbolic="YES" id="eat-Vf-awF"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="6JV-1P-vfQ" secondAttribute="bottom" constant="19.5" id="g6h-vk-21G"/>
                                         <constraint firstItem="btj-JX-lgu" firstAttribute="leading" secondItem="biJ-nw-R4J" secondAttribute="trailing" constant="8" symbolic="YES" id="oTp-sZ-5FT"/>
-                                        <constraint firstItem="6JV-1P-vfQ" firstAttribute="top" secondItem="bDK-es-TUY" secondAttribute="topMargin" constant="19.5" id="yM6-uc-D4F"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -86,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lu1-nN-fhU">
-                                <rect key="frame" x="30" y="162" width="354" height="325"/>
+                                <rect key="frame" x="30" y="162" width="354" height="295"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xperience Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hf-MG-Ebc">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
@@ -103,17 +95,8 @@
                                             <constraint firstAttribute="height" constant="196" id="dMD-pk-BNg"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="9sn-pJ-ln7">
-                                        <rect key="frame" x="0.0" y="252" width="354" height="22"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7C-eY-nyh">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="22"/>
-                                                <state key="normal" image="play.circle" catalog="system"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="alK-5Z-47z">
-                                        <rect key="frame" x="0.0" y="282" width="354" height="43"/>
+                                        <rect key="frame" x="0.0" y="252" width="354" height="43"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuv-KM-N3V">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="14.5"/>
@@ -270,6 +253,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yTn-Sb-UDn">
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <connections>
+                                    <outlet property="delegate" destination="F1Y-84-I0M" id="JNb-A8-ZRn"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5BS-O4-B2Q"/>
@@ -352,8 +338,6 @@
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="mic" catalog="system" width="108" height="128"/>
-        <image name="play" catalog="system" width="120" height="128"/>
-        <image name="play.circle" catalog="system" width="128" height="121"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -8,18 +8,26 @@
 import UIKit
 import MapKit
 
-class XperiencePost {
-    let title: String
+class XperiencePost: NSObject {
+    let postTitle: String
     let image: UIImage
-    let location: CLLocationCoordinate2D
+    let latitude: Double
+    let longitude: Double
 
-    init(title: String, image: UIImage, location: CLLocationCoordinate2D) {
-        self.title = title
+    init(title: String, image: UIImage, latitude: Double, longitude: Double) {
+        self.postTitle = title
         self.image = image
-        self.location = location
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+
+}
+
+extension XperiencePost: MKAnnotation {
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
-    
-    
+    var title: String? { postTitle }
     
 }

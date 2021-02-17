@@ -12,13 +12,18 @@ class XperienceMapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    
     private var userTrackingButton: MKUserTrackingButton!
     private let locationManager = CLLocationManager()
+    var xperiencePostController = XperiencePostController()
+    
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       mapView.addAnnotations(xperiencePostController.postsArray)
+        xperiencePostController = XperiencePostController()
         locationManager.requestWhenInUseAuthorization()
         userTrackingButton = MKUserTrackingButton(mapView: mapView)
         userTrackingButton.translatesAutoresizingMaskIntoConstraints = false
@@ -42,5 +47,10 @@ class XperienceMapViewController: UIViewController {
     */
 
 }
+
+
+    
+    
+    
 
 
