@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 
 class XperiencePostController {
+    static let shared = XperiencePostController()
     
     var postsArray: [XperiencePost] = []
     

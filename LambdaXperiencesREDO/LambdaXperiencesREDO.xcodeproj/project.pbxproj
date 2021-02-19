@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C16034425DF489700164168 /* piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7C16034325DF489700164168 /* piano.mp3 */; };
 		7C1E572425D4F6CE00026305 /* XperiencePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1E572325D4F6CE00026305 /* XperiencePost.swift */; };
 		7C34CB4F25D77677002FA2E5 /* XperienceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34CB4E25D77677002FA2E5 /* XperienceDetailViewController.swift */; };
 		7C7A725A25D63A7300B9D6E9 /* XperiencePostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A725925D63A7300B9D6E9 /* XperiencePostTableViewCell.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C16034325DF489700164168 /* piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piano.mp3; sourceTree = "<group>"; };
 		7C1E572325D4F6CE00026305 /* XperiencePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperiencePost.swift; sourceTree = "<group>"; };
 		7C34CB4E25D77677002FA2E5 /* XperienceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperienceDetailViewController.swift; sourceTree = "<group>"; };
 		7C7A725925D63A7300B9D6E9 /* XperiencePostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperiencePostTableViewCell.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				7CE53C3325D22A390066C4AA /* SceneDelegate.swift */,
 				7CE53C3125D22A390066C4AA /* AppDelegate.swift */,
 				7CE53C3A25D22A3A0066C4AA /* Assets.xcassets */,
+				7C16034325DF489700164168 /* piano.mp3 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				7CE53C3E25D22A3A0066C4AA /* LaunchScreen.storyboard in Resources */,
 				7CE53C3B25D22A3A0066C4AA /* Assets.xcassets in Resources */,
+				7C16034425DF489700164168 /* piano.mp3 in Resources */,
 				7CE53C3925D22A390066C4AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

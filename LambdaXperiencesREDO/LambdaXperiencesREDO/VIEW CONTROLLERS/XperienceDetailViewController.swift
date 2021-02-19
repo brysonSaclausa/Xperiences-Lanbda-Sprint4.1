@@ -6,18 +6,21 @@
 //
 
 import UIKit
+import AVFoundation
 
 class XperienceDetailViewController: UIViewController {
     
     var post: XperiencePost?
     var postIndex: Int?
     var postController: XperiencePostController?
+    var audioPlayer: AVAudioPlayer?
     
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     
 
     override func viewDidLoad() {
@@ -34,6 +37,24 @@ class XperienceDetailViewController: UIViewController {
         longitudeLabel?.text = "Longitude \(String(post.longitude))"
         
     }
+    
+    func loadAudio() {
+        let audioURL = Bundle.main.url(forResource: "piano", withExtension: "mp3")!
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: audioURL)
+        } catch {
+            preconditionFailure("Failure to load audio file \(error) ")
+        }
+        
+    }
+    
+    //MARK: - IBACTIONS
+    @IBAction func togglePlayback(_ sender: Any) {
+        audioPlayer?.play()
+        
+    }
+    
     
 
     /*

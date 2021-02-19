@@ -17,7 +17,7 @@ class XperienceTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        xperiencePostController = XperiencePostController()
+        xperiencePostController = XperiencePostController.shared
 
     }
 
@@ -54,8 +54,7 @@ class XperienceTableViewController: UITableViewController {
             vc.postController = xperiencePostController
 
 
-        } else
-        if segue.identifier == "addXperiencePost" {
+        } else if segue.identifier == "addXperiencePost" {
             guard let createVC = segue.destination as? AddXperienceViewController else { return }
            
             createVC.xperiencePost = xperiencePost

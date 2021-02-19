@@ -31,3 +31,11 @@ extension XperiencePost: MKAnnotation {
     var title: String? { postTitle }
     
 }
+/*
+ Tab bar controller
+ [
+ tab1 -> [MapView, view2, view3],
+ tab2 -> [TableView, DetailView],
+ ]
+ 
+ */

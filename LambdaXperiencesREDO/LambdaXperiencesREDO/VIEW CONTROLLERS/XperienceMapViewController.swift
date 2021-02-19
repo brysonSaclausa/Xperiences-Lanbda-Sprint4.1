@@ -15,15 +15,19 @@ class XperienceMapViewController: UIViewController {
     
     private var userTrackingButton: MKUserTrackingButton!
     private let locationManager = CLLocationManager()
-    var xperiencePostController = XperiencePostController()
+    var xperiencePostController = XperiencePostController.shared
     
 
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        print("test")
+        addAndReloadPins()
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       mapView.addAnnotations(xperiencePostController.postsArray)
-        xperiencePostController = XperiencePostController()
+
         locationManager.requestWhenInUseAuthorization()
         userTrackingButton = MKUserTrackingButton(mapView: mapView)
         userTrackingButton.translatesAutoresizingMaskIntoConstraints = false
@@ -34,6 +38,10 @@ class XperienceMapViewController: UIViewController {
         ])
     }
     
+    func addAndReloadPins() {
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotations(xperiencePostController.postsArray)
+    }
     
 
     /*
