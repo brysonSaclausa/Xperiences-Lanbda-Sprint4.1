@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreImage
+import CoreImage.CIFilterBuiltins
 import Photos
 import AVFoundation
 
@@ -44,6 +45,7 @@ class AddXperienceViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var audioVisualizer: AudioVisualizer!
+    @IBOutlet weak var photoFilter: UISlider!
     
     private lazy var timeIntervalFormatter: DateComponentsFormatter = {
         // NOTE: DateComponentFormatter is good for minutes/hours/seconds
@@ -57,10 +59,38 @@ class AddXperienceViewController: UIViewController {
     }()
     
     var originalImage: UIImage? {
+        
+            didSet {
+                guard let originalImage = originalImage else {
+                    scaledImage = nil
+                    return
+                }
+                
+                var scaledSize = imageView.bounds.size
+                let scale = imageView.contentScaleFactor // UIScreen.main.scale
+    //            let scale: CGFloat = 0.5
+                
+                scaledSize.width *= scale
+                scaledSize.height *= scale
+                
+                guard let scaledUIImage = originalImage.imageByScaling(toSize: scaledSize) else {
+                    scaledImage = nil
+                    return
+                }
+                
+                scaledImage = CIImage(image: scaledUIImage)
+            }
+    }
+    
+    var scaledImage: CIImage? {
         didSet {
             updateImage()
         }
     }
+    
+    private let context = CIContext()
+    private let colorControlsFilter = CIFilter.colorControls()
+    private let blurFilter = CIFilter.gaussianBlur()
     
     //MARK: - LIFECYCLE
     override func viewDidLoad() {
@@ -150,10 +180,9 @@ class AddXperienceViewController: UIViewController {
         timer = nil
     }
     
-    
     private func updateImage() {
-        if let originalImage = originalImage {
-            imageView.image = originalImage
+        if let scaledImage = scaledImage {
+            imageView.image = image(byFiltering: scaledImage)
         } else {
             imageView.image = nil
         }
@@ -169,6 +198,18 @@ class AddXperienceViewController: UIViewController {
             imagePicker.delegate = self
             present(imagePicker, animated: true)
         }
+    
+    private func image(byFiltering inputImage: CIImage) -> UIImage? {
+        colorControlsFilter.inputImage = inputImage
+        blurFilter.inputImage = colorControlsFilter.outputImage?.clampedToExtent()
+        blurFilter.radius = photoFilter.value
+        
+        guard let outputImage = blurFilter.outputImage else { return nil }
+        guard let renderedCGImage = context.createCGImage(outputImage, from: inputImage.extent) else { return nil }
+        
+        return UIImage(cgImage: renderedCGImage)
+        
+    }
     
     private func getCurrentLocation(){
         if CLLocationManager.locationServicesEnabled() {
@@ -339,6 +380,11 @@ class AddXperienceViewController: UIViewController {
         } else {
             requestPermissionOrStartRecording()
         }
+    }
+    @IBAction func blurChanged(_ sender: UISlider) {
+        print("slider changed")
+        updateImage()
+        print("slider changed!!!!!")
     }
     
 }
