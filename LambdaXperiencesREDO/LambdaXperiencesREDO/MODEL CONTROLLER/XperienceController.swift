@@ -23,15 +23,15 @@ class XperiencePostController {
     
     
     //MARK: - Mock Posts
-    let slbLocation = CLLocationCoordinate2D(latitude: 21.344843, longitude: -157.910602)
-    let ahLocation = CLLocationCoordinate2D(latitude: 21.299927, longitude: -157.755751)
+//    let slbLocation = CLLocationCoordinate2D(latitude: 21.344843, longitude: -157.910602)
+//    let ahLocation = CLLocationCoordinate2D(latitude: 21.299927, longitude: -157.755751)
     
-    init() {
-        let post1 = XperiencePost(title: "This is a mock post!", image: UIImage(named: "SLB")!, latitude: slbLocation.latitude, longitude: slbLocation.longitude)
-        
-        [post1].forEach {
-            postsArray.append($0)
-        }
-    }
+//    init() {
+//        let post1 = XperiencePost(title: "This is a mock post!", image: UIImage(named: "SLB")!, latitude: slbLocation.latitude, longitude: slbLocation.longitude)
+//        
+//        [post1].forEach {
+//            postsArray.append($0)
+//        }
+//    }
 
 }

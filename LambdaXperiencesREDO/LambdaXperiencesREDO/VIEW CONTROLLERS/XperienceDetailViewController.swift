@@ -51,8 +51,6 @@ class XperienceDetailViewController: UIViewController {
     
     //MARK: - IBACTIONS
     @IBAction func togglePlayback(_ sender: Any) {
-        audioPlayer?.play()
-        
     }
     
     

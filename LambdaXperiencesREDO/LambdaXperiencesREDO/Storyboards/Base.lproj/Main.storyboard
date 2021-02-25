@@ -114,14 +114,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0k8-y2-x5e">
-                                <rect key="frame" x="200" y="491" width="15" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="play.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="togglePlayback:" destination="QSn-an-2Db" eventType="touchUpInside" id="fX4-H9-D2f"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HW8-rT-zHP"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -138,7 +130,6 @@
                         <outlet property="imageView" destination="8DQ-J5-lH8" id="AXo-e4-Bb4"/>
                         <outlet property="latitudeLabel" destination="tuv-KM-N3V" id="xS3-pw-vod"/>
                         <outlet property="longitudeLabel" destination="C0u-5e-RxU" id="UsB-LB-HMQ"/>
-                        <outlet property="playButton" destination="0k8-y2-x5e" id="P4r-jG-Gbt"/>
                         <outlet property="titleLabel" destination="7Hf-MG-Ebc" id="bGq-ut-3OP"/>
                     </connections>
                 </viewController>
@@ -245,7 +236,7 @@
                                                     <action selector="togglePlayback:" destination="SJs-F0-cAs" eventType="touchUpInside" id="JMg-8h-7Iv"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gl6-Gu-BaU" customClass="AudioVisualizer" customModule="SimpleAudioRecorder" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gl6-Gu-BaU" customClass="AudioVisualizer" customModule="LambdaXperiencesREDO" customModuleProvider="target">
                                                 <rect key="frame" x="128" y="0.0" width="128" height="46"/>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEy-Ot-NWX">

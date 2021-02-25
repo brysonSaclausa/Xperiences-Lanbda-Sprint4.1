@@ -11,6 +11,7 @@
 		7C1E572425D4F6CE00026305 /* XperiencePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1E572325D4F6CE00026305 /* XperiencePost.swift */; };
 		7C34CB4F25D77677002FA2E5 /* XperienceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34CB4E25D77677002FA2E5 /* XperienceDetailViewController.swift */; };
 		7C46B3CD25E760F1000989DC /* AudioVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C46B3CC25E760F1000989DC /* AudioVisualizer.swift */; };
+		7C46B3D025E817F3000989DC /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C46B3CF25E817F3000989DC /* AudioRecorder.swift */; };
 		7C7A725A25D63A7300B9D6E9 /* XperiencePostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A725925D63A7300B9D6E9 /* XperiencePostTableViewCell.swift */; };
 		7C9CF7E725D888EE00E831FD /* XperienceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CF7E625D888EE00E831FD /* XperienceMapViewController.swift */; };
 		7CE53C3225D22A390066C4AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE53C3125D22A390066C4AA /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		7C1E572325D4F6CE00026305 /* XperiencePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperiencePost.swift; sourceTree = "<group>"; };
 		7C34CB4E25D77677002FA2E5 /* XperienceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperienceDetailViewController.swift; sourceTree = "<group>"; };
 		7C46B3CC25E760F1000989DC /* AudioVisualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioVisualizer.swift; sourceTree = "<group>"; };
+		7C46B3CF25E817F3000989DC /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		7C7A725925D63A7300B9D6E9 /* XperiencePostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperiencePostTableViewCell.swift; sourceTree = "<group>"; };
 		7C9CF7E625D888EE00E831FD /* XperienceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperienceMapViewController.swift; sourceTree = "<group>"; };
 		7CE53C2E25D22A390066C4AA /* LambdaXperiencesREDO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LambdaXperiencesREDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 				7CE53C5125D239140066C4AA /* XperienceTableViewController.swift */,
 				7CE53C5425D2394A0066C4AA /* AddXperienceViewController.swift */,
 				7C34CB4E25D77677002FA2E5 /* XperienceDetailViewController.swift */,
+				7C46B3CF25E817F3000989DC /* AudioRecorder.swift */,
 			);
 			path = "VIEW CONTROLLERS";
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				7CE53C5525D2394A0066C4AA /* AddXperienceViewController.swift in Sources */,
 				7C34CB4F25D77677002FA2E5 /* XperienceDetailViewController.swift in Sources */,
 				7C46B3CD25E760F1000989DC /* AudioVisualizer.swift in Sources */,
+				7C46B3D025E817F3000989DC /* AudioRecorder.swift in Sources */,
 				7CE53C3225D22A390066C4AA /* AppDelegate.swift in Sources */,
 				7C1E572425D4F6CE00026305 /* XperiencePost.swift in Sources */,
 				7CE53C3425D22A390066C4AA /* SceneDelegate.swift in Sources */,

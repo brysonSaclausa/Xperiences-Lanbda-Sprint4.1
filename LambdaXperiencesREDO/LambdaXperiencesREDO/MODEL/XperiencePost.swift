@@ -11,14 +11,14 @@ import MapKit
 class XperiencePost: NSObject {
     let postTitle: String
     let image: UIImage
-    //    // create image as image URL,
-    //    var image: UIImage?
+//    let audioURL: URL?
     let latitude: Double
     let longitude: Double
 
     init(title: String, image: UIImage, latitude: Double, longitude: Double) {
         self.postTitle = title
         self.image = image
+//        self.audioURL = audioURL
         self.latitude = latitude
         self.longitude = longitude
     }
