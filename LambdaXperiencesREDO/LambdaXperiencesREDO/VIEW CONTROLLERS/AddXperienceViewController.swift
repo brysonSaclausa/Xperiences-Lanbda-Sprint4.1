@@ -26,6 +26,12 @@ class AddXperienceViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var timeElapsedLabel: UILabel!
+    @IBOutlet weak var timeRemainingLabel: UILabel!
+    @IBOutlet weak var timeSlider: UISlider!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var audioVisualizer: AudioVisualizer!
     
     var originalImage: UIImage? {
         didSet {
@@ -67,6 +73,9 @@ class AddXperienceViewController: UIViewController {
         }
     }
     
+    //MARK: - Audio Recording
+    
+    
     
     //MARK: - IBACTIONS
     @IBAction func savePostButtonTapped(_ sender: Any) {
@@ -80,31 +89,24 @@ class AddXperienceViewController: UIViewController {
             DispatchQueue.main.async {
                 self.savePostDelegate?.reloadData()
                 self.dismiss(animated: true, completion: nil)
-                
-            
         }
-                
-            
-        
     }
+    
+    
     
     @IBAction func choosePhotoButtonTapped(_ sender: Any) {
         presentImagePickerController()
     }
     
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func togglePlayback(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func updateCurrentTime(_ sender: UISlider) {
+    }
+    
+    @IBAction func toggleRecording(_ sender: Any) {
+    }
+    
 }
 
 extension AddXperienceViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

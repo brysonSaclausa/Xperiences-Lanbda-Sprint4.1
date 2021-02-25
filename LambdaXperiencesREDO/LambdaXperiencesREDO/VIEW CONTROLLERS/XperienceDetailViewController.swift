@@ -20,7 +20,7 @@ class XperienceDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
-    @IBOutlet weak var playButton: UIButton!
+
     
 
     override func viewDidLoad() {
